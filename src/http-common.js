@@ -2,7 +2,7 @@ import axios from "axios";
 
 // change base url with host
 export default axios.create({
-  baseURL: "http://localhost:8080/api",
+  baseURL: "https://patchwork-full.herokuapp.com/api",
   headers: {
     "Content-type": "application/json"
   }
