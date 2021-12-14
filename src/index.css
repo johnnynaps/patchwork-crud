@@ -1,13 +1,315 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* base styles */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Quicksand";
+  color: whitesmoke;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  background-color: rgb(34, 32, 32);
+}
+
+.navbar {
+  display: grid;
+  border-bottom: 1px solid rgb(150, 110, 235);
+}
+
+.nav-title{
+  margin: 1rem 0rem 0rem 1rem;
+}
+.nav-title, .links {
+  grid-area: auto;
+}
+.links {
+  margin-bottom: .5rem;
+}
+
+.navbar a {
+  float: right;
+  display: block;
+  text-align: center;
+  padding: 0 .5rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: rgb(150, 110, 235);
+}
+
+/*search bar*/
+.form-control {
+  background-color: rgb(34, 32, 32);
+}
+
+.form-control button {
+  background-color: rgb(150, 110, 235);
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.form-control button:hover {
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.list-container.child {
+  border-bottom: 1px solid rgb(150, 110, 235);
+}
+
+.list-container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 1rem;
+  display: flex column;
+}
+
+.list-container label {
+  text-align: left;
+  display: block;
+  font-weight: bold;
+}
+
+.list-container h2 {
+  font-size: 30px;
+  margin-bottom: 1rem;
+}
+
+.list-container input {
+  width: 100%;
+  padding: 1rem 1rem;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+  font-weight: bold;
+  color: rgb(150, 110, 235);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.list-container button {
+  background-color: rgb(150, 110, 235);
+  border: 0;
+  padding: .5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.list-container button:hover {
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.list-group {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-content: space-around;
+  gap: 5px;
+}
+
+.nice-line {
+  border-bottom: 1px solid rgb(150, 110, 235);
+}
+
+/*list items*/
+.list-group-item {
+  display: flex;
+  flex: 50;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 0;
+  padding: 1rem;
+  border-radius: 20px;
+  text-align: left;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.list-group-item:hover {
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  color: rgb(150, 110, 235);
+  cursor: pointer;
+}
+
+/*result*/
+.result-container-parent {
+  padding: 1.5rem;
+  border-radius: 20px;
+  max-width: 400px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.result-container-child {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 0;
+  padding: 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.beep p {
+  text-align: center;
+}
+
+.btn-container {
+  padding: 1rem;
+}
+
+.list-btn {
+  background-color: rgb(150, 110, 235);
+  border-radius: 8px;
+  padding: .5rem;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: .5rem;
+  float: right;
+}
+
+.list-btn:hover {
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.remote-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.remote-links a {
+  padding-top: .5rem;
+  text-decoration: none;
+}
+
+.remote-links a:hover {
+  color: rgb(150, 110, 235);
+}
+
+/*home*/
+.home-page-container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: justify;
+  padding: 1rem;
+}
+
+.home-page-container h1 {
+  padding: 1rem;
+  display: block;
+  border-bottom: 1px solid rgb(150, 110, 235);
+}
+
+.home-page-container p {
+  padding: 1rem;
+  display: block;
+  border-bottom: 1px solid rgb(150, 110, 235);
+}
+
+.go-home {
+  padding: 1rem;
+  display: block;
+  text-align: right;
+}
+.go-home:hover {
+  color: rgb(150, 110, 235);
+}
+
+/*footer*/
+.footer {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgb(150, 110, 235);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.footer a {
+  color: black;
+  text-decoration: none;
+  margin: 1rem;
+}
+
+.footer a:hover {
+  font-weight: bold;
+}
+
+/* submit form */
+.submit-form {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 1rem;
+  display: flex column;
+  margin-bottom: 70px;
+}
+
+.submit-form label {
+  text-align: left;
+  display: block;
+  font-weight: bold;
+}
+
+.submit-form input {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+  font-weight: bold;
+  color: rgb(150, 110, 235);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.submit-form button, .btn-link {
+  background-color: rgb(150, 110, 235);
+  border: 0;
+  padding: .5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.account-link-button, .btn {
+  margin-left: 1rem;
+}
+
+.submit-form button:hover, .btn-link:hover {
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.submit-form p {
+  margin: 1rem;
+}
+
+@media screen and (max-width: 600px){
+  .footer {
+      display: none;
+  }
+}
+@media screen and (max-height: 800px){
+  .footer {
+      display: none;
+  }
 }
