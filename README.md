@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Patchwork
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my full-stack project for Web Dev with Professor Burns
 
-## Available Scripts
+## Summary
 
-In the project directory, you can run:
+I decided pretty late that I wanted to use Node.js and React. Now that it's working, I'm glad I did, but I REALLY wish I stuck to the stuff we learned in class. I just bit off way more than I could chew with the time I had available. I didn't know how to use most of this
+I am using :
 
-### `npm start`
+ - AWS RDS (MySQL Database)
+ - Node.js (Back-end)
+ - React (Front-end)
+ - Heroku (Hosting)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+I wanted to develop an application where a user would:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+ - Make an account
+ - "Subscribe" to games to show their chosen updates in one place.
+ - Have a "one-stop-shop" for all their subscribed game's updates and some at a glance information.
+ - Be aesthetically pleased
 
-### `npm test`
+I almost did it? I did most of it? The bones are there?
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I spent FAR too much time stuck in certain areas trying to understand what tools did what and how to use them. I spent at least two days with an almost working version before I realized I wasn't using any SQL (I made a local JSON server and was querying against that) so I had to tear that down and completely refactor it. At that point I wrote off persisting a logged in user state.
 
-### `npm run build`
+I hate Elvis and I hate using MySQL in the terminal. Instead, I spun up an instance on AWS RDS so I could use HeidiSQL to interface with the DB during development. I have *some* experience in doing this. I also really wanted to learn how to use Node and React so I figured this would be a great opportunity to do so. Before this project I NEVER thought I'd even be tempted into front-end design, but over the course of this ~~weekend~~ semester I see why people like it. It's cool to put something out there like this.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Anyway, once I realized my LoE was like way more than I thought (which was past (passed?) the point of no return) I had to scrap some things. I couldn't, in a timely enough way, figure out how to persist credentials. I'm sure it's super simple, but I couldn't seem to keep the index.css (a horrible mess and in the future I'm eager to use classes in a non terrible way) off my screen. I was caught up with the tools I was using, as implementing them was easy enough, but trying to understand exactly what they are doing for me was a challenge. 
+I mainly used:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ - React Router
+ - React Redux
+ - Axios
+ - Express
+ - Sequelize
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Reace Router handled my routing. Redux handled passing data around the application. Axios did my HTTP Requests. Express framework simplified the server code immensely. Sequelize handled my queries and mapped the returns.
+The app is basically just queries with a UI right now. There's nothing too special happening. There's "features" live on the site that allow you to do whatever you want to the database and I'm only now considering that dangerous to my wallet depending on how quickly someone could add a billion rows to my DB. I'll probably take that down Tuesday night. I'll probably develop this fully, I've been completely obsessed with making it look how I want so now it's just pretty CRUD. 
 
-### `npm run eject`
+I didn't use PHP.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thanks for the semester!
